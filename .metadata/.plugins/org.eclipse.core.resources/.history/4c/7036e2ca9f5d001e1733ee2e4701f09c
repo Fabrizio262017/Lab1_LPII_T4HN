@@ -1,0 +1,38 @@
+package Views;
+
+import controllers.EmpleadoController;
+
+import models.Empleado;
+
+public class EmpleadoView {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		//String empleado = new EmpleadoController().createEmpleado("Olano Farfan","Jorge Fabrizio",19,"Masculino",1500);
+		//String empleado = new EmpleadoController().createEmpleado("Bellido Sanchez","Cielo Alexandra",21,"Femenino",2550.5);
+		//String empleado = new EmpleadoController().createEmpleado("Casas Flores","Leonardo Mathias",30,"Masculino",3000);
+		
+		//String empleado = new EmpleadoController().deleteEmpleado(5);
+		
+		//String empleado = new EmpleadoController().updateEmpleado(4,"Hernandez Loayza","Marcos Ernesto");
+		
+		//System.out.println(empleado);
+		
+		Empleado empleado = new EmpleadoController().readerEmpleado(4);
+
+        if (empleado != null) {
+            System.out.println("Empleado encontrado:");
+            System.out.println("ID: " + empleado.getIdEmpleado());
+            System.out.println("Apellidos: " + empleado.getApellidos());
+            System.out.println("Nombres: " + empleado.getNombres());
+            System.out.println("Edad: " + empleado.getEdad());
+            System.out.println("Sexo: " + empleado.getSexo());
+            System.out.println("Salario: " + empleado.getSalario());
+        } else {
+            System.out.println("Empleado no encontrado");
+        }
+		
+	}
+
+}
